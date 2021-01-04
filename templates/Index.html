@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Wine Quality Prediction</title>
+    </head>
+    <body>
+        <h1>Predict Salary Analysis</h1>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <input type="text" name="vol_acd" placeholder="Volatile Acidity" required="required"/>
+            <input type="text" name="sul" placeholder="Sulphates" required="required"/>
+            <input type="text" name="alch" placeholder="Alcohol" required="required"/>
+            <button type="submit">Predict</button>
+        </form>
+        <br>
+        {{ prediction_text }}
+    </body>
+</html>
